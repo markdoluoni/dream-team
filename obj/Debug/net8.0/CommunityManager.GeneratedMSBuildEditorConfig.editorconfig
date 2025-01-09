@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CommunityManager
+build_property.RootNamespace = CommunityManager
+build_property.ProjectDir = C:\Users\HOME\source\repos\dream-team\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\HOME\source\repos\dream-team
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Houses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG91c2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Houses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG91c2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Houses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG91c2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Houses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG91c2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/NewLogin/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3TG9naW5cTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/NewLogin/NewLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3TG9naW5cTmV3TG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Payment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Payment/InvalidHouses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudFxJbnZhbGlkSG91c2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Payment/SuccessCharge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudFxTdWNjZXNzQ2hhcmdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/SuccessPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXFN1Y2Nlc3NQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/UpdateLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXFVwZGF0ZUxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Residents/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzaWRlbnRzXFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Shared/_LayoutDefault.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXREZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Shared/_LayoutManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Shared/_LayoutResident.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRSZXNpZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HOME/source/repos/dream-team/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

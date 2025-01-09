@@ -1,0 +1,64 @@
+﻿@page
+@model CommunityManager.Pages.Payment.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style ="text-align:center">Payments</h1>
+
+<form method="post" asp-page-handler="Charge">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Residents[0].name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Residents[0].rentDue)
+                </th>
+                <th>
+                    Charge Rent?
+                </th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            @for (int i = 0; i < Model.Residents.Count; i++)
+            {
+                <input type="hidden" asp-for="Residents[i].Id" />
+                <tr class="">
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Residents[i].name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Residents[i].rentDue)
+                    </td>
+                    <td>
+                        <input class="form-check-input" type="checkbox" asp-for="Residents[i].charge" name="selectedResidents" value="@i" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h2 style="text-align:center">Email</h2>
+
+    <span style="opacity: 0.5; text-align:center">
+        <h6 color="black">unique text inputs (MUST BE EXACT)</h6>
+        <h6 color="black">&lt;link&gt; &lt;name&gt; &lt;baseRent&gt; &lt;utility&gt; &lt;total&gt;</h6>
+    </span>
+    <div class="form-group">
+        <h5>subject</h5>
+        <input asp-for="subject" class="form-control" />
+    </div>
+    <div class="form-group">
+        <h5>body</h5>
+        <textarea asp-for="body" class="form-control" rows="6"></textarea>
+    </div>
+    <div class="form-group">
+        <h5>footer</h5>
+        <textarea asp-for="footer" class="form-control" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Charge Selected</button>
+</form>

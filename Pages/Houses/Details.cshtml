@@ -1,0 +1,56 @@
+@page
+@model CommunityManager.Pages.Houses.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>House</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.name)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.address)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.House.utility)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.House.utility)
+        </dd>
+
+        
+        <dt class="col-sm-2">
+            Residents:
+            <ul>
+                @foreach (var resident in Model.House.residents ?? new List<CommunityManager.Models.Resident>())
+                {
+                    <li style="font-weight:normal">
+                        @resident.name
+                        <form method="post" asp-page="./Details" asp-route-id="@Model.House.Id">
+                            <input type="hidden" name="ResidentId" value="@resident.Id" />
+                        </form>
+                    </li>
+                }
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.House.Id" class="btn btn-primary">Edit</a>
+    <a asp-page="./Index" class="btn btn-danger">Back to List</a>
+</div>

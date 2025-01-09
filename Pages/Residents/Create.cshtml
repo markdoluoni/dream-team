@@ -1,0 +1,52 @@
+﻿@page
+@model CommunityManager.Pages.Residents.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Resident</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="resident.name" class="control-label"></label>
+                <input asp-for="resident.name" class="form-control" />
+                <span asp-validation-for="resident.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resident.age" class="control-label"></label>
+                <input asp-for="resident.age" class="form-control" />
+                <span asp-validation-for="resident.age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resident.baseRent" class="control-label"></label>
+                <input asp-for="resident.baseRent" class="form-control" />
+                <span asp-validation-for="resident.baseRent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resident.phoneNumber" class="control-label"></label>
+                <input asp-for="resident.phoneNumber" class="form-control" />
+                <span asp-validation-for="resident.phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resident.email" class="control-label"></label>
+                <input asp-for="resident.email" class="form-control" />
+                <span asp-validation-for="resident.email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-danger">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

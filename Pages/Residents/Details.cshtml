@@ -1,0 +1,148 @@
+﻿@page
+@model CommunityManager.Pages.Residents.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>@Html.DisplayFor(model => model.resident.name)</h4>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <h5 style="text-align:center">Activity Logs</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Description</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Logs.Any())
+                        {
+                            @foreach (var log in Model.Logs)
+                            {
+                                <tr>
+                                    <td>@log.Action</td>
+                                    <td>@log.Description</td>
+                                    <td>@log.Timestamp.ToString("g")</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center">No logs currently available for this resident.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </dl>
+        </div>
+        <div class="col-md-2">
+            <dt class="col-sm-12">
+                @Html.DisplayNameFor(model => model.resident.age)
+            </dt>
+            <dd class="col-sm-12">
+                @Html.DisplayFor(model => model.resident.age)
+            </dd>
+            <dt class="col-sm-12">
+                @Html.DisplayNameFor(model => model.resident.baseRent)
+            </dt>
+            <dd class="col-sm-12">
+                $@Html.DisplayFor(model => model.resident.baseRent)
+            </dd>
+            <dt class="col-sm-12">
+                @Html.DisplayNameFor(model => model.resident.house)
+            </dt>
+            <dd class="col-sm-12">
+                @Html.DisplayFor(model => model.houseName)
+            </dd>
+        </div>
+        <div class="col-md-2">
+            <dt class="col-sm-12">
+                @Html.DisplayNameFor(model => model.resident.phoneNumber)
+            </dt>
+            <dd class="col-sm-12">
+                @Html.DisplayFor(model => model.resident.phoneNumber)
+            </dd>
+            <dt class="col-sm-12">
+                @Html.DisplayNameFor(model => model.resident.email)
+            </dt>
+            <dd class="col-sm-12">
+                @Html.DisplayFor(model => model.resident.email)
+            </dd>
+        </div>
+    </div>
+</div>
+
+<div style="width:800px; margin:0 auto;">
+    <strong>@Html.DisplayNameFor(model => model.resident.rentDue)</strong>
+    @Html.DisplayFor(model => model.resident.rentDue)
+</div>
+@if (!@User.IsInRole("Manager"))
+{
+    <form method="post" asp-page-handler="Pay">
+        <input type="hidden" asp-for="resident.Id" />
+        <input type="hidden" asp-for="resident.name" />
+        <input type="hidden" asp-for="resident.rentDue" />
+        <div style="width:800px; margin:0 auto;">
+            <div class="form-group">
+                <label asp-for="payment" class="control-label">Rent Payment Amount</label>
+                <input asp-for="payment" class="form-control-sm" step="0.01" required />
+                <span asp-validation-for="payment" class="text-danger"></span>
+            </div>
+            <button type="submit">Pay</button>
+        </div>
+    </form>
+}
+@if (User.IsInRole("Manager"))
+{
+    <form method="post" asp-page-handler="Charge">
+        <input type="hidden" asp-for="resident.Id" />
+        <input type="hidden" asp-for="resident.name" />
+        <input type="hidden" asp-for="resident.age" />
+        <input type="hidden" asp-for="resident.email" />
+        <input type="hidden" asp-for="resident.phoneNumber" />
+        <input type="hidden" asp-for="resident.baseRent" />
+        <input type="hidden" asp-for="resident.rentDue" />
+        <input type="hidden" asp-for="resident.house" />
+        <div style="width:800px; margin:0 auto;">
+            <div class="form-group">
+
+                <label asp-for="payment" class="control-label">Charge amount</label>
+
+
+                <input asp-for="payment" class="form-control-sm" step="0.01" required />
+                <span asp-validation-for="payment" class="text-danger"></span>
+            </div>
+            <button type="submit">Charge</button>
+        </div>
+    </form>
+}
+
+@if (@User.IsInRole("Manager")) {
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.resident.Id" class="btn btn-primary">Edit</a>
+
+        @if(@Model.userExists == false) {
+            <a asp-page="./User" asp-route-id="@Model.resident.Id" class="btn btn-secondary">Create User</a>
+        }
+
+        @if (@Model.userExists == true)
+        {
+            <a asp-page="./UpdateLogin" asp-route-id="@Model.resident.Id" class="btn btn-secondary">Change Login</a>
+        }
+
+        <a asp-page="./Index" class="btn btn-danger">Back to List</a>
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

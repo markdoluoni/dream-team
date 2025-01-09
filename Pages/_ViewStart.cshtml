@@ -1,0 +1,13 @@
+﻿@using CommunityManager.Models
+@{
+    //Store the user's role, then change the layout accordingly
+    @if(@GlobalVars.ShowAll||User.IsInRole("Manager")){ //User is not logged in
+        Layout = "_LayoutManager"; //User is logged in as a manager
+    }
+    else if(User.Identity.IsAuthenticated){
+        Layout = "_LayoutResident"; //User is logged in as a resident
+    }
+    else{
+        Layout = "_LayoutDefault"; //User is not logged in
+    }
+}

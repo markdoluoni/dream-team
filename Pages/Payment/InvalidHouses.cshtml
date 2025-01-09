@@ -1,0 +1,18 @@
+﻿@page
+@model CommunityManager.Pages.Payment.InvalidHousesModel
+@{
+}
+
+<h1 style="text-align: center">House Assignment Error</h1>
+
+<span style="font-size: large">
+	All Residents must have a house in order to charge all Residents.
+	<br />
+	Either Delete or add a house to the following Residents:
+	<br />
+	@for (int i = 0; i < Model.Residents.Count; i++)
+	{
+		@Model.Residents[i].name
+		<br />
+	}
+</span>
